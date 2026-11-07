@@ -13,6 +13,16 @@ class Link {
 
 };
 
+ void  printList(Link *n){
+    while (n!=nullptr )
+    {
+        cout << n->data << " ";
+        n = n->next;
+    }
+    
+ }
+
+
 int main (){
     Link *first  = new Link(10);
     Link *second  = new Link(20);
@@ -21,9 +31,7 @@ int main (){
     first->next = second;
     second->next = third;
 
-    cout << first->data << endl;
-    cout << second->data << endl;
-    cout << third->data << endl;
+    printList(first);
 
     return 0 ;
 }
